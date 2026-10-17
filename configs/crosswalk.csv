@@ -1,0 +1,156 @@
+survey_id,concept,source_file,source_variable,timing_reference,status,evidence_url,evidence_label_verbatim,verified_on,notes
+RW2019DHS,survey_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,cluster_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,stratum,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,sample_weight,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,household_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,woman_line,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,birth_index,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,days_since_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,facility_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,multiple_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,is_most_recent_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,child_alive_at_window_end,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,mother_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,newborn_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,mother_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,newborn_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,mother_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,newborn_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,facility_stay_days,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,maternal_age_at_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,parity,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,maternal_education,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,anc_visits,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,caesarean_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,facility_sector,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,skilled_birth_attendant,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,reported_birth_size,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,household_wealth_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,residence_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,marital_status_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2019DHS,insurance_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,survey_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,cluster_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,stratum,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,sample_weight,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,household_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,woman_line,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,birth_index,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,days_since_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,facility_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,multiple_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,is_most_recent_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,child_alive_at_window_end,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,mother_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,newborn_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,mother_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,newborn_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,mother_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,newborn_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,facility_stay_days,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,maternal_age_at_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,parity,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,maternal_education,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,anc_visits,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,caesarean_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,facility_sector,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,skilled_birth_attendant,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,reported_birth_size,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,household_wealth_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,residence_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,marital_status_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+RW2025DHS,insurance_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,survey_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,cluster_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,stratum,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,sample_weight,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,household_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,woman_line,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,birth_index,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,days_since_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,facility_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,multiple_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,is_most_recent_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,child_alive_at_window_end,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,mother_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,newborn_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,mother_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,newborn_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,mother_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,newborn_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,facility_stay_days,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,maternal_age_at_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,parity,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,maternal_education,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,anc_visits,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,caesarean_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,facility_sector,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,skilled_birth_attendant,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,reported_birth_size,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,household_wealth_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,residence_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,marital_status_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+KE2022DHS,insurance_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+UG2022DHS,survey_id,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,cluster_id,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,stratum,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,sample_weight,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,household_id,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,woman_line,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,birth_index,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,days_since_birth,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_delivery,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,multiple_birth,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,is_most_recent_birth,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,child_alive_at_window_end,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_stay_days,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,maternal_age_at_birth,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,parity,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,maternal_education,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,anc_visits,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,caesarean_delivery,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_sector,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,skilled_birth_attendant,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,reported_birth_size,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,household_wealth_at_interview,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,residence_at_interview,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,marital_status_at_interview,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,insurance_at_interview,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+ET2024DHS,survey_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,cluster_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,stratum,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,sample_weight,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,household_id,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,woman_line,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,birth_index,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,days_since_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,facility_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,multiple_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,is_most_recent_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,child_alive_at_window_end,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,mother_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,newborn_check_before_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,mother_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,newborn_check_after_discharge,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,mother_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,newborn_after_discharge_check_day,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,facility_stay_days,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,maternal_age_at_birth,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,parity,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,maternal_education,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,anc_visits,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,caesarean_delivery,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,facility_sector,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,skilled_birth_attendant,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,reported_birth_size,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,household_wealth_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,residence_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,marital_status_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.
+ET2024DHS,insurance_at_interview,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; source variable not yet verified against official recode/questionnaire.

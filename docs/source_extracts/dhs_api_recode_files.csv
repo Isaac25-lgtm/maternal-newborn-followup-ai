@@ -1,0 +1,21 @@
+SurveyId,FileType,FileFormat,FileName,FileDateLastModified,FileSizeBytes
+ET2024DHS,Births Recode,Stata dataset (.dta),ETBR8ADT.zip,"June, 24 2026 17:22:35",6534421
+ET2024DHS,Children's Recode,Stata dataset (.dta),ETKR8ADT.zip,"June, 24 2026 17:23:40",3625499
+ET2024DHS,Household Recode,Stata dataset (.dta),ETHR8ADT.zip,"June, 24 2026 17:18:12",6506789
+ET2024DHS,Individual Recode,Stata dataset (.dta),ETIR8ADT.zip,"June, 24 2026 17:19:28",12578892
+KE2022DHS,Births Recode,Stata dataset (.dta),KEBR8CDT.ZIP,"August, 12 2024 19:19:55",10189472
+KE2022DHS,Children's Recode,Stata dataset (.dta),KEKR8CDT.ZIP,"August, 12 2024 19:20:26",5287336
+KE2022DHS,Household Recode,Stata dataset (.dta),KEHR8CDT.ZIP,"August, 12 2024 19:16:42",13382808
+KE2022DHS,Individual Recode,Stata dataset (.dta),KEIR8CDT.ZIP,"August, 12 2024 19:18:03",17657543
+RW2019DHS,Births Recode,Stata dataset (.dta),RWBR81DT.ZIP,"September, 21 2021 18:59:10",4782253
+RW2019DHS,Children's Recode,Stata dataset (.dta),RWKR81DT.ZIP,"September, 21 2021 18:59:08",2852693
+RW2019DHS,Household Recode,Stata dataset (.dta),RWHR81DT.ZIP,"September, 21 2021 18:59:07",6497034
+RW2019DHS,Individual Recode,Stata dataset (.dta),RWIR81DT.ZIP,"September, 21 2021 18:59:04",8467614
+RW2025DHS,Births Recode,Stata dataset (.dta),RWBR91DT.zip,"July, 20 2026 16:39:55",4411088
+RW2025DHS,Children's Recode,Stata dataset (.dta),RWKR91DT.zip,"July, 20 2026 16:40:43",2479334
+RW2025DHS,Household Recode,Stata dataset (.dta),RWHR91DT.zip,"July, 20 2026 16:34:33",4221101
+RW2025DHS,Individual Recode,Stata dataset (.dta),RWIR91DT.zip,"July, 20 2026 16:36:45",8833346
+UG2016DHS,Births Recode,Stata dataset (.dta),UGBR7BDT.ZIP,"May, 28 2019 10:27:22",7789193
+UG2016DHS,Children's Recode,Stata dataset (.dta),UGKR7BDT.ZIP,"May, 28 2019 10:27:21",4559093
+UG2016DHS,Household Recode,Stata dataset (.dta),UGHR7BDT.ZIP,"May, 28 2019 10:27:21",8160230
+UG2016DHS,Individual Recode,Stata dataset (.dta),UGIR7BDT.ZIP,"May, 28 2019 10:27:20",12988352

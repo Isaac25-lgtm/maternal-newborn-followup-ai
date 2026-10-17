@@ -1,0 +1,23 @@
+{
+  "probe_id": "R03-source-probe-2026-10-17",
+  "as_of_utc_date": "2026-10-17",
+  "environment": "Claude Code cloud container; outbound HTTPS via agent proxy; Python 3.13.16; 4 vCPU; 15 GiB RAM",
+  "policy": "max 3 ordinary requests per host, short timeouts, public catalogue/documentation only, no authentication, no respondent microdata",
+  "note": "Raw responses were kept outside the repository (session scratchpad, not persisted). Small extracts are in docs/source_extracts/. sha256 is of the response body as saved.",
+  "requests": [
+    {"host": "dhsprogram.com", "n": 1, "url": "https://dhsprogram.com/methodology/survey/survey-display-554.cfm", "http": 200, "bytes": 57457, "saved": false, "sha256": null, "purpose": "reachability probe; body discarded, content not inspected"},
+    {"host": "dhsprogram.com", "n": 2, "url": "https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf", "http": 200, "bytes": 14694544, "saved": false, "sha256": null, "purpose": "reachability probe; body discarded, so report identity and contents NOT inspected"},
+    {"host": "dhsprogram.com", "n": 3, "url": "https://dhsprogram.com/pubs/pdf/DHSQ8/DHS8_Womans_QRE_EN_19Jan2024_DHSQ8.pdf", "http": 404, "bytes": 103, "saved": false, "sha256": null, "purpose": "guessed questionnaire URL; not found"},
+    {"host": "api.dhsprogram.com", "n": 1, "url": "https://api.dhsprogram.com/rest/dhs/surveys?countryIds=RW,UG,KE,ET&surveyType=DHS&f=json", "http": 200, "bytes": 22316, "saved": true, "sha256": "5ef60becdaf0d54d7cc21c62b17ceb17c00d68f924e0632bde8ccd476a398a29"},
+    {"host": "api.dhsprogram.com", "n": 2, "url": "https://api.dhsprogram.com/rest/dhs/indicators?f=json&returnFields=IndicatorId,Label,Definition,Level1,Level2,Level3,Denominator&perpage=5000", "http": 200, "bytes": 1645497, "saved": true, "sha256": "24f375597f4401f527a6e79ee9da479b85be62c4fed680d94fb10e98e537476c", "records": 4655},
+    {"host": "api.dhsprogram.com", "n": 3, "url": "https://api.dhsprogram.com/rest/dhs/datasets?countryIds=RW,KE,UG,ET&f=json&perpage=2000", "http": 200, "bytes": 639140, "saved": true, "sha256": "13f8102fd92664785c1316e0219e9b601d9c9a2565d3e7b0126d98cdedf4a03d", "records": 1844},
+    {"host": "microdata.worldbank.org", "n": 1, "url": "https://microdata.worldbank.org/index.php/api/catalog/search?sk=demographic%20health%20survey&country%5B%5D=RWA&country%5B%5D=UGA&country%5B%5D=KEN&from=2019&ps=30", "http": 200, "bytes": 22715, "saved": true, "sha256": "3727dbac039e6ccf1699c493e4fa8bc212407fbfc3fe586d70631ffca26a5367"},
+    {"host": "microdata.worldbank.org", "n": 2, "url": "https://microdata.worldbank.org/index.php/api/catalog/RWA_2019_DHS_v01_M/variables", "http": 200, "bytes": 10351, "saved": true, "sha256": "d41519ec192c5fa8e75804762910ea79df8643e845c32c617b43f57342edddb5", "result": "found=3053, returned first 100 (household recode only); paginated"},
+    {"host": "microdata.worldbank.org", "n": 3, "url": "https://microdata.worldbank.org/index.php/api/catalog/RWA_2025_DHS_v01_M/variables", "http": 200, "bytes": 9875, "saved": true, "sha256": "4763b4f8a2277db0d8bba425a5a36fd2ca19bdeba29eba45b2ded3f16503bde3", "result": "found=9260, returned first 100 (household recode only); paginated"},
+    {"host": "microdata.statistics.gov.rw", "n": 1, "url": "https://microdata.statistics.gov.rw/index.php/api/catalog/search?sk=demographic%20health%20survey&ps=20", "http": 404, "bytes": 539, "saved": true, "sha256": "51e1170611f4973e651fa601c8c82f8e6a4c204d3c4b35e86ad00ce88bab0664", "result": "guessed API path; 404 is not evidence the catalogue is unavailable"},
+    {"host": "statistics.knbs.or.ke", "n": 1, "url": "https://statistics.knbs.or.ke/nada/index.php/api/catalog/search?sk=demographic%20health%20survey&ps=20", "http": 200, "bytes": 9978, "saved": true, "sha256": "2c45274f34bf4f338b4cb683d107dc5b3039a5655c3dd536d9ac7a4339255016"},
+    {"host": "statistics.knbs.or.ke", "n": 2, "url": "https://statistics.knbs.or.ke/nada/index.php/api/catalog/DDI-KEN-KNBS-KDHS-2022-V001/variables?limit=20000&offset=0", "http": 200, "bytes": 26, "saved": true, "sha256": "21f8a71d91c2d6e1e2edd802b014b87996033684206abc958a2b52fcaea72ec8", "result": "total=0 (no variable-level metadata published)"},
+    {"host": "statistics.knbs.or.ke", "n": 3, "url": "https://statistics.knbs.or.ke/nada/index.php/api/catalog/DDI-KEN-KNBS-KDHS-2022-V001", "http": 200, "bytes": 14743, "saved": true, "sha256": "e62a9d28f08a0905db3899b76be5670ba6bb01c0c9113240de2431841e76b946"}
+  ],
+  "host_budget_remaining": {"dhsprogram.com": 0, "api.dhsprogram.com": 0, "microdata.worldbank.org": 0, "statistics.knbs.or.ke": 0, "microdata.statistics.gov.rw": 2}
+}

@@ -1,0 +1,13 @@
+# Reproducibility
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e ".[test]"
+.venv/bin/python -m pytest -q
+```
+
+Checkpoint 1 result (2026-10-17, Python 3.13.16, pandas 2.3.3, numpy 2.5.4, pytest 8.4.2): `27 passed`. CI runs the same tests on Python 3.11 with no network downloads.
+
+Source extracts in `docs/source_extracts/` were produced by `scripts/extract_public_metadata.py` from DHS API responses whose URLs and sha256 are in `data/manifests/source_probe_2026-10-17.json`. API responses can change over time; a re-fetch may not hash identically.
+
+No step reads respondent data. Any future step that does must call `mnfollowup.access.require_processing_permission` first and write outputs outside the repository except for vetted aggregates.

@@ -22,3 +22,8 @@ data/processed/
 checkpoints/
 models/
 .DS_Store
+data/audit/
+*.sav
+*.zip
+*.ZIP
+*.egg-info/
