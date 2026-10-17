@@ -28,7 +28,7 @@ Full logs: [docs/DATA_ACCESS.md](docs/DATA_ACCESS.md), [docs/ENDPOINT_AUDIT.md](
 ## Design (frozen before any data is seen)
 
 - **Unit:** mother + most recent live birth, facility delivery, singleton, birth within 24 months of interview, full endpoint window elapsed, newborn alive at **discharge**. Newborns who die after discharge stay in the cohort as a competing `died` state; survivor-only analysis is a separate, explicit sensitivity.
-- **Endpoint (per member):** 1 = no check after discharge within *W* days; 0 = check after discharge within *W*; missing = don't know, timing unknown, negative or inconsistent time, or a clock conversion that lacks stay length. The caller must state the clock of the timing item; an ambiguous clock raises an error. Dyad endpoint = at least one of mother or newborn missed (three-valued logic: unknown stays unknown). A pre-discharge check never counts. *W* (candidates 7 or 42 days from birth) is fixed after the raw audit.
+- **Endpoint (per member):** 1 = no check after discharge within *W* days; 0 = check after discharge within *W*; missing = don't know, timing unknown, negative time, a post-discharge check timed before discharge, death before discharge or before a reported check, or a clock conversion that lacks stay length (each with a reason flag; no times imputed). The caller must state the clock of the timing item; an ambiguous clock raises an error. Dyad endpoint = at least one of mother or newborn missed (three-valued logic: unknown stays unknown). A pre-discharge check never counts. *W* (candidates 7 or 42 days from birth) is fixed after the raw audit.
 - **Predictors:** only information available at discharge. Interview-time measurements (current wealth, residence, marital status, insurance) are rejected by the leakage guard and only allowed as a labelled sensitivity analysis.
 - **Planned comparison (only after Gate 1 passes on real data):** simple triage rules, prevalence, weighted regularised logistic, one tree ensemble; Rwanda 2019–20 → 2025 temporal test; leave-one-country-out only if comparable; cluster-aware uncertainty. Primary metric: missed pairs captured at actual outreach capacity.
 
@@ -52,7 +52,7 @@ See [docs/STATUS.md](docs/STATUS.md) and the [minimum access request](docs/ACCES
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e ".[test]"
-.venv/bin/python -m pytest -q          # 41 tests, synthetic fixtures only
+.venv/bin/python -m pytest -q          # 60 tests, synthetic fixtures only
 ```
 
 Re-creating the source extracts requires re-fetching the three DHS API URLs in [docs/DATA_ACCESS.md](docs/DATA_ACCESS.md) to a directory outside the repository, then:

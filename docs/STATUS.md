@@ -19,7 +19,8 @@ Last updated 2026-10-17 (public phase 2).
 - Checkpoint 1: environment probe; 13 catalogue requests; package and 27 tests.
 - Phase 2 (13 public requests): Rwanda 2019-20 questionnaire (FR370 Appendix F) and Rwanda 2025 NISR dictionary read; crosswalk now has 9 `QUESTIONNAIRE_ONLY` rows (RW2019DHS, no variable names asserted) and 10 `VERIFIED_LABEL` rows (RW2025DHS); five-competitor matrix at abstract depth.
 - Code fix: eligibility now conditions on newborn alive **at discharge**; post-discharge newborn deaths kept as a competing `died` state; survivor-only analysis is an explicit sensitivity. Explicit timing clocks; negative, inconsistent and unconvertible times become unknown; ambiguous clocks raise.
-- Tests: 41 passed (`.venv/bin/python -m pytest -q`).
+- Chronology fix (final review): a birth-clock post-discharge check earlier than the known stay is `invalid_time` under both window clocks; death before a reported check is `inconsistent` (never `checked`); death before discharge is `inconsistent`; same-day check/death and undeterminable order are `unknown`; a valid check before a later death stays `checked` with the death kept in `newborn_died_after_discharge`. Reasons recorded in `*_flag`.
+- Tests: 60 passed (`.venv/bin/python -m pytest -q`).
 
 ## Not done
 

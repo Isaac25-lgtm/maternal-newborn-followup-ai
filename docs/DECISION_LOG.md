@@ -16,3 +16,4 @@
 | 2026-10-17 | `missed_followup` requires explicit `check_clock`; no default | Post-discharge timing items use the delivery clock; silent assumption would mis-time windows |
 | 2026-10-17 | Add `QUESTIONNAIRE_ONLY` crosswalk level; RW2019DHS rows carry wording but no variable names | Recode names for RWIR81 not seen |
 | 2026-10-17 | Access request narrowed to RWIR81 only; 2025 file deferred | Least data needed to test codes before requesting more |
+| 2026-10-17 | Chronology invariants: check before known discharge invalid under both window clocks; death before reported check or before discharge `inconsistent`; same-day/undeterminable order `unknown`; valid check before later death stays `checked`; no imputed times | Final code review at 7c8e13d |

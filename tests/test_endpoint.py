@@ -53,13 +53,14 @@ def test_endpoint_states_birth_clock(synthetic_dyads):
         "newborn died after discharge before any check": (0, np.nan, np.nan, "died"),
         "negative mother timing": (np.nan, 0, np.nan, "checked"),
         "newborn checked then died": (0, 0, 0, "checked"),
-        "check timed before discharge on birth clock": (0, 0, 0, "checked"),
+        "check timed before discharge on birth clock": (np.nan, 0, np.nan, "checked"),
     }
     for note, (m, n, d, ns) in expect.items():
         got = tuple(out.loc[note, ["mother_missed", "newborn_missed", "dyad_any_missed"]])
         np.testing.assert_array_equal(got, (m, n, d), err_msg=note)
         assert out.loc[note, "newborn_state"] == ns, note
     assert out.loc["negative mother timing", "mother_state"] == "invalid_time"
+    assert out.loc["check timed before discharge on birth clock", "mother_flag"] == "check_before_discharge"
     assert out.loc["mother dont-know newborn missed", "mother_state"] == "unknown"
 
 
@@ -112,3 +113,97 @@ def test_unit_value_to_days():
     np.testing.assert_allclose(got, [0.5, 3, 14, np.nan, np.nan, np.nan])
     with pytest.raises(ValueError, match="unrecognised"):
         unit_value_to_days(pd.Series(["months"]), pd.Series([1]))
+
+
+# --- chronology invariants: hand-built SYNTHETIC rows, both window clocks ---------
+
+def _syn(**kw):
+    """One SYNTHETIC_NOT_REAL dyad; mother always validly checked on day 3 after a 1-day stay."""
+    row = dict(synthetic_record="SYNTHETIC_NOT_REAL", facility_stay_days=1.0,
+               mother_check_after_discharge=1, mother_after_discharge_check_day=3.0,
+               newborn_check_after_discharge=1, newborn_after_discharge_check_day=3.0,
+               newborn_age_at_death_days=np.nan)
+    row.update(kw)
+    return pd.DataFrame([row])
+
+
+BOTH = pytest.mark.parametrize("window_from", ["birth", "discharge"])
+
+
+def _score(df, window_from, window=7):
+    return missed_followup(df, window, check_clock="birth", window_from=window_from).iloc[0]
+
+
+@BOTH
+def test_birth_clock_check_before_known_discharge_is_invalid(window_from):
+    r = _score(_syn(facility_stay_days=3.0, newborn_after_discharge_check_day=1.0), window_from)
+    assert (r.newborn_state, r.newborn_flag) == ("invalid_time", "check_before_discharge")
+    assert np.isnan(r.newborn_missed) and np.isnan(r.dyad_any_missed)
+
+
+@BOTH
+def test_check_on_discharge_day_is_valid(window_from):
+    r = _score(_syn(facility_stay_days=3.0, newborn_after_discharge_check_day=3.0), window_from)
+    assert r.newborn_state == "checked" and r.newborn_missed == 0
+
+
+@BOTH
+def test_death_before_reported_check_is_never_checked(window_from):
+    r = _score(_syn(newborn_after_discharge_check_day=5.0, newborn_age_at_death_days=3.0), window_from)
+    assert (r.newborn_state, r.newborn_flag) == ("inconsistent", "death_before_reported_check")
+    assert np.isnan(r.newborn_missed) and np.isnan(r.dyad_any_missed)
+    assert r.newborn_died_after_discharge == 1
+
+
+@BOTH
+def test_death_before_late_check_outside_window_is_inconsistent_not_died(window_from):
+    r = _score(_syn(newborn_after_discharge_check_day=20.0, newborn_age_at_death_days=4.0), window_from)
+    assert (r.newborn_state, r.newborn_flag) == ("inconsistent", "death_before_reported_check")
+
+
+@BOTH
+def test_valid_check_then_later_death_stays_checked_and_death_kept(window_from):
+    r = _score(_syn(newborn_after_discharge_check_day=2.0, newborn_age_at_death_days=5.0), window_from)
+    assert r.newborn_state == "checked" and r.newborn_missed == 0 and r.dyad_any_missed == 0
+    assert r.newborn_died_after_discharge == 1
+
+
+@BOTH
+def test_same_day_check_and_death_order_unknown(window_from):
+    r = _score(_syn(newborn_age_at_death_days=3.0), window_from)
+    assert (r.newborn_state, r.newborn_flag) == ("unknown", "death_check_same_day")
+
+
+@BOTH
+def test_no_check_then_death_in_window_is_competing_died(window_from):
+    r = _score(_syn(newborn_check_after_discharge=0, newborn_after_discharge_check_day=np.nan,
+                    newborn_age_at_death_days=4.0), window_from)
+    assert r.newborn_state == "died" and np.isnan(r.newborn_missed)
+
+
+@BOTH
+def test_death_before_discharge_is_inconsistent_even_if_marked_alive(window_from):
+    r = _score(_syn(facility_stay_days=2.0, newborn_check_after_discharge=0,
+                    newborn_after_discharge_check_day=np.nan, newborn_age_at_death_days=1.0), window_from)
+    assert (r.newborn_state, r.newborn_flag) == ("inconsistent", "death_before_discharge")
+    assert np.isnan(r.newborn_died_after_discharge)
+
+
+def test_unknown_stay_with_death_discharge_window_is_unknown_not_died():
+    r = _score(_syn(facility_stay_days=np.nan, newborn_check_after_discharge=0,
+                    newborn_after_discharge_check_day=np.nan, newborn_age_at_death_days=4.0), "discharge")
+    assert (r.newborn_state, r.newborn_flag) == ("unknown", "death_vs_window_unknown")
+    # birth window does not need stay length: death day 4 <= 7 is a competing death
+    assert _score(_syn(facility_stay_days=np.nan, newborn_check_after_discharge=0,
+                       newborn_after_discharge_check_day=np.nan, newborn_age_at_death_days=4.0), "birth").newborn_state == "died"
+
+
+def test_discharge_clock_check_with_unknown_stay_cannot_be_ordered_against_death():
+    df = _syn(facility_stay_days=np.nan, newborn_after_discharge_check_day=2.0, newborn_age_at_death_days=10.0)
+    r = missed_followup(df, 7, check_clock="discharge", window_from="discharge").iloc[0]
+    assert (r.newborn_state, r.newborn_flag) == ("unknown", "death_check_order_unknown")
+
+
+def test_death_timing_is_never_imputed():
+    r = _score(_syn(newborn_check_after_discharge=0, newborn_after_discharge_check_day=np.nan), "birth")
+    assert r.newborn_state == "missed" and r.newborn_died_after_discharge == 0  # NA death = alive per concept

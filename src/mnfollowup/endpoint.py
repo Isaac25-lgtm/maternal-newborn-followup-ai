@@ -10,14 +10,21 @@ from discharge. The caller must state the clock of the timing columns
 (``check_clock``) and the reference of the window (``window_from``); there is
 no default that silently assumes one.
 
-Per-member states:
-    checked       post-discharge check within the window      -> missed 0
-    missed        no post-discharge check within the window   -> missed 1
-    died          newborn died after discharge, before the window ended and
-                  before any check: a competing state, not a miss -> NA
-    invalid_time  negative timing, or (window_from='discharge') a
-                  "post-discharge" check timed before discharge   -> NA
-    unknown       don't know / missing answer or timing         -> NA
+Per-member states (all chronology compared on the birth clock; no death or
+check time is ever imputed):
+    checked       valid post-discharge check within the window   -> missed 0
+    missed        no post-discharge check within the window      -> missed 1
+    died          newborn died after discharge, before the window ended, with
+                  no valid check before death: competing state   -> NA
+    invalid_time  negative time, or a "post-discharge" check timed before the
+                  known discharge time (whatever ``window_from`` is) -> NA
+    inconsistent  chronology contradicts itself: death before discharge, or
+                  death before a reported check                  -> NA
+    unknown       don't know / missing answer, timing, stay length needed for a
+                  conversion, or check/death order undeterminable -> NA
+``<member>_flag`` names the reason for invalid_time / inconsistent / unknown
+chronology. A valid check before a later death stays ``checked``; the death is
+kept separately in ``newborn_died_after_discharge``.
 A check before discharge never counts as post-discharge follow-up.
 """
 
@@ -81,33 +88,53 @@ def apply_eligibility(
     return cur.copy(), pd.DataFrame(flow)
 
 
-def _to_window_reference(day: pd.Series, stay: pd.Series, check_clock: str, window_from: str) -> pd.Series:
-    if check_clock == window_from:
-        return day
-    if check_clock == "birth":  # window from discharge
-        return day - stay
-    return day + stay  # discharge clock, window from birth
-
-
 def _member_state(checked_after, check_day, stay, window_days, check_clock, window_from, death_day=None):
-    state = pd.Series("unknown", index=checked_after.index, dtype="object")
-    t = _to_window_reference(check_day, stay, check_clock, window_from)
-    invalid = (checked_after == 1) & ((check_day < 0) | (t < 0))
+    """Return (state, flag) Series for one member."""
+    idx = checked_after.index
+    state = pd.Series("unknown", index=idx, dtype="object")
+    flag = pd.Series("", index=idx, dtype="object")
+    # the check on both clocks; NA when the conversion needs an unknown stay
+    if check_clock == "birth":
+        t_birth, t_discharge = check_day, check_day - stay
+    else:
+        t_birth, t_discharge = check_day + stay, check_day
+    t = t_birth if window_from == "birth" else t_discharge
+    checked = checked_after == 1
+
     state[checked_after == 0] = "missed"
-    state[(checked_after == 1) & (t <= window_days)] = "checked"
-    state[(checked_after == 1) & (t > window_days)] = "missed"
-    state[invalid] = "invalid_time"
+    state[checked & (t <= window_days)] = "checked"
+    state[checked & (t > window_days)] = "missed"
+    flag[checked & check_day.notna() & t.isna()] = "clock_conversion_needs_stay"
+    before_discharge = checked & (check_day >= 0) & (t_discharge < 0)
+    state[before_discharge] = "invalid_time"
+    flag[before_discharge] = "check_before_discharge"
+    negative = checked & (check_day < 0)
+    state[negative] = "invalid_time"
+    flag[negative] = "negative_time"
+
     if death_day is not None:
-        # window end and death expressed on the birth clock
-        if window_from == "birth":
-            window_end = pd.Series(float(window_days), index=state.index)
-        else:
-            window_end = stay + window_days
-        died_in_window = death_day.notna() & (death_day <= window_end)
-        unclear = death_day.notna() & window_end.isna()
-        state[died_in_window & (state == "missed")] = "died"
-        state[unclear & (state == "missed")] = "unknown"
-    return state
+        known = death_day.notna()
+        window_end = pd.Series(float(window_days), index=idx) if window_from == "birth" else stay + window_days
+        valid_check = checked & state.isin(["checked", "missed"])
+        # no valid check before the window closed, and death inside the window
+        died = known & (death_day <= window_end) & (state == "missed")
+        state[died] = "died"
+        unclear = known & window_end.isna() & (state == "missed")
+        state[unclear] = "unknown"
+        flag[unclear] = "death_vs_window_unknown"
+        order_unknown = known & valid_check & t_birth.isna()
+        state[order_unknown] = "unknown"
+        flag[order_unknown] = "death_check_order_unknown"
+        same_day = known & valid_check & (death_day == t_birth)
+        state[same_day] = "unknown"
+        flag[same_day] = "death_check_same_day"
+        death_first = known & checked & (death_day < t_birth) & ~negative
+        state[death_first] = "inconsistent"
+        flag[death_first] = "death_before_reported_check"
+        before_dc = known & (death_day < stay)
+        state[before_dc] = "inconsistent"
+        flag[before_dc] = "death_before_discharge"
+    return state, flag
 
 
 def missed_followup(df: pd.DataFrame, window_days: int, *, check_clock: str, window_from: str = "birth") -> pd.DataFrame:
@@ -123,10 +150,10 @@ def missed_followup(df: pd.DataFrame, window_days: int, *, check_clock: str, win
             raise ValueError(f"{name}={val!r} is ambiguous; must be one of {CLOCKS}")
     stay = df.facility_stay_days if "facility_stay_days" in df else pd.Series(np.nan, index=df.index)
     out = df.copy()
-    out["mother_state"] = _member_state(
+    out["mother_state"], out["mother_flag"] = _member_state(
         df.mother_check_after_discharge, df.mother_after_discharge_check_day, stay, window_days, check_clock, window_from
     )
-    out["newborn_state"] = _member_state(
+    out["newborn_state"], out["newborn_flag"] = _member_state(
         df.newborn_check_after_discharge,
         df.newborn_after_discharge_check_day,
         stay,
@@ -135,6 +162,11 @@ def missed_followup(df: pd.DataFrame, window_days: int, *, check_clock: str, win
         window_from,
         death_day=df.newborn_age_at_death_days,
     )
+    death = df.newborn_age_at_death_days
+    died_after = pd.Series(np.nan, index=df.index, dtype="float64")
+    died_after[death.isna()] = 0.0
+    died_after[death.notna() & (death >= stay)] = 1.0
+    out["newborn_died_after_discharge"] = died_after  # NA if death timing vs discharge unknown or contradictory
     code = {"checked": 0.0, "missed": 1.0}
     out["mother_missed"] = out.mother_state.map(code).astype("float64")
     out["newborn_missed"] = out.newborn_state.map(code).astype("float64")

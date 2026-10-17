@@ -6,7 +6,7 @@ python3 -m venv .venv
 .venv/bin/python -m pytest -q
 ```
 
-Public phase 2 result (2026-10-17): `41 passed`. Checkpoint 1 result (2026-10-17, Python 3.13.16, pandas 2.3.3, numpy 2.5.4, pytest 8.4.2): `27 passed`. CI runs the same tests on Python 3.11 with no network downloads.
+Final review fix (2026-10-17): `60 passed`. Public phase 2 result: `41 passed`. Checkpoint 1 result (2026-10-17, Python 3.13.16, pandas 2.3.3, numpy 2.5.4, pytest 8.4.2): `27 passed`. CI runs the same tests on Python 3.11 with no network downloads.
 
 Source extracts in `docs/source_extracts/` were produced by `scripts/extract_public_metadata.py` from DHS API responses whose URLs and sha256 are in `data/manifests/source_probe_2026-10-17.json`. API responses can change over time; a re-fetch may not hash identically.
 

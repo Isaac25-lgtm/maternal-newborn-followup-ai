@@ -33,9 +33,12 @@ Per member, window *W* days, with the timing clock stated explicitly (`check_clo
 |---|---|---|
 | checked | post-discharge check within *W* | 0 |
 | missed | no post-discharge check, or first one after *W* | 1 |
-| died | newborn died after discharge, before window end and before any check | NA (competing) |
-| invalid_time | negative time, or a post-discharge check timed before discharge | NA |
-| unknown | don't know / missing answer, timing, or stay length needed for clock conversion | NA |
+| died | newborn died after discharge, before window end, with no valid check before death | NA (competing) |
+| invalid_time | negative time, or a post-discharge check timed before the known stay length, under **either** window clock | NA |
+| inconsistent | death before discharge, or death before a reported check (never counted as checked) | NA |
+| unknown | don't know / missing answer, timing, stay length needed for a conversion, or check and death on the same day / in undeterminable order | NA |
+
+All chronology is compared on the birth clock and no check or death time is imputed. A valid check before a later death stays `checked`; the death is kept separately in `newborn_died_after_discharge`. Each NA state carries a reason in `mother_flag` / `newborn_flag` so the raw audit can count them.
 
 Dyad endpoint = at least one member missed (1 if either is 1; 0 only if both 0; else NA). Survivor-only analysis (dropping `died`) is available only as the explicit sensitivity `endpoint.survivor_only_sensitivity`, reported alongside the primary.
 
