@@ -23,7 +23,7 @@ def test_interview_time_wealth_rejected_by_default_and_only_allowed_explicitly()
     assert check_predictors(["household_wealth_at_interview"], allow_interview_time=True)
 
 
-@pytest.mark.parametrize("bad", ["sample_weight", "cluster_id", "days_since_birth", "child_alive_at_window_end"])
+@pytest.mark.parametrize("bad", ["sample_weight", "cluster_id", "days_since_birth", "newborn_alive_at_discharge"])
 def test_design_and_eligibility_rejected(bad):
     with pytest.raises(LeakageError):
         check_predictors([bad])

@@ -1,9 +1,13 @@
 """Survey-to-concept crosswalk with an evidence gate.
 
 Every row maps one harmonised concept to one source variable for one survey.
-Rows start as UNVERIFIED with an empty source variable. A mapping may only be
-promoted with verbatim evidence (official label text and its URL); endpoint
-derivation for modelling requires the 50-dyad raw-code audit status.
+Evidence levels:
+    UNVERIFIED          concept only; no source variable may be asserted
+    QUESTIONNAIRE_ONLY  official question wording seen, recode variable unknown
+                        (source_variable must stay empty)
+    VERIFIED_LABEL      official recode variable name + label seen
+    VERIFIED_RAW_AUDIT  codes and skips checked on 50 dyads in approved data
+Endpoint derivation for modelling requires VERIFIED_RAW_AUDIT.
 """
 
 from __future__ import annotations
@@ -19,14 +23,15 @@ COLUMNS = [
     "concept",
     "source_file",
     "source_variable",
+    "source_location",  # page / question number / dictionary offset
     "timing_reference",  # birth | discharge | not_applicable | UNVERIFIED
-    "status",  # UNVERIFIED | VERIFIED_LABEL | VERIFIED_RAW_AUDIT
+    "status",  # see STATUS_ORDER
     "evidence_url",
     "evidence_label_verbatim",
     "verified_on",
     "notes",
 ]
-STATUS_ORDER = {"UNVERIFIED": 0, "VERIFIED_LABEL": 1, "VERIFIED_RAW_AUDIT": 2}
+STATUS_ORDER = {"UNVERIFIED": 0, "QUESTIONNAIRE_ONLY": 1, "VERIFIED_LABEL": 2, "VERIFIED_RAW_AUDIT": 3}
 TIMED_CONCEPTS = ("mother_after_discharge_check_day", "newborn_after_discharge_check_day")
 
 
@@ -57,15 +62,19 @@ def validate(df: pd.DataFrame) -> list[str]:
         if r.status not in STATUS_ORDER:
             errors.append(f"{where}: bad status {r.status!r}")
             continue
-        if r.status == "UNVERIFIED":
+        if r.status in ("UNVERIFIED", "QUESTIONNAIRE_ONLY"):
             if r.source_variable:
-                errors.append(f"{where}: UNVERIFIED rows must not assert a source variable")
-        else:
-            for field in ("source_file", "source_variable", "evidence_url", "evidence_label_verbatim", "verified_on"):
-                if not r[field]:
-                    errors.append(f"{where}: {r.status} requires {field}")
-            if r.concept in TIMED_CONCEPTS and r.timing_reference not in ("birth", "discharge"):
-                errors.append(f"{where}: timing concepts need timing_reference birth|discharge")
+                errors.append(f"{where}: {r.status} rows must not assert a source variable")
+        if r.status == "UNVERIFIED":
+            continue
+        required = ["source_file", "source_location", "evidence_url", "evidence_label_verbatim", "verified_on"]
+        if r.status != "QUESTIONNAIRE_ONLY":
+            required.append("source_variable")
+        for field in required:
+            if not r[field]:
+                errors.append(f"{where}: {r.status} requires {field}")
+        if r.concept in TIMED_CONCEPTS and r.timing_reference not in ("birth", "discharge"):
+            errors.append(f"{where}: timing concepts need timing_reference birth|discharge")
     return errors
 
 

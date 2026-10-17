@@ -11,3 +11,8 @@
 | 2026-10-17 | Multiples excluded from primary cohort, counted | Dyad definition ambiguous for twins; revisit after audit |
 | 2026-10-17 | No `train.py`, `baselines.py`, `experiment.yaml` or dashboard yet | Would be untested placeholders before Gate 1 |
 | 2026-10-17 | Uganda 2022 not usable as validation until access route confirmed | Not listed in DHS Program catalogue |
+| 2026-10-17 | Correct checkpoint-1 framing: standard indicators were insufficient to rule out distinct items; Rwanda questionnaires do ask after-discharge checks separately | FR370 Q441/Q445; NISR 2025 m66/m70 |
+| 2026-10-17 | Eligibility conditions on newborn alive at discharge, not at window end; post-discharge deaths kept as competing `died` state; survivor-only only as explicit sensitivity | Window-end survival is future information and induces selection |
+| 2026-10-17 | `missed_followup` requires explicit `check_clock`; no default | Post-discharge timing items use the delivery clock; silent assumption would mis-time windows |
+| 2026-10-17 | Add `QUESTIONNAIRE_ONLY` crosswalk level; RW2019DHS rows carry wording but no variable names | Recode names for RWIR81 not seen |
+| 2026-10-17 | Access request narrowed to RWIR81 only; 2025 file deferred | Least data needed to test codes before requesting more |

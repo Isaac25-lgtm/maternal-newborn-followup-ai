@@ -10,5 +10,5 @@ No respondent microdata is stored in this repository or was accessed in this env
 | Ethiopia DHS 2024–25 (`ET2024DHS`) | Later geographic test | DHS Program | Recode files listed; API release 2026-07-08 | Not approved / not fetched |
 | Uganda DHS 2022 | Geographic test (if obtainable) | **Not listed by DHS Program**; confirm with UBOS | Absent from DHS API | Route unknown |
 
-- `samples/SYNTHETIC_harmonised_dyads.csv` — 12 hand-built rows for tests. Every row has `synthetic_record = SYNTHETIC_NOT_REAL`. Not derived from any survey.
-- `manifests/source_probe_2026-10-17.json` — every catalogue request made, with HTTP status, bytes and sha256.
+- `samples/SYNTHETIC_harmonised_dyads.csv` — 16 hand-built edge-case rows for tests. Every row has `synthetic_record = SYNTHETIC_NOT_REAL`. Not derived from any survey.
+- `manifests/source_probe_2026-10-17.json` and `manifests/source_probe_2026-10-17_phase2.json` — every public request made, with HTTP status, bytes and sha256.

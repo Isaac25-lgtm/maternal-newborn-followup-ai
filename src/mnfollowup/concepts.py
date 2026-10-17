@@ -54,10 +54,10 @@ _CONCEPTS = [
     Concept("multiple_birth", "eligibility", Availability.INTRAPARTUM, "Twin or higher-order birth (1/0)"),
     Concept("is_most_recent_birth", "eligibility", Availability.DESIGN, "Birth is respondent's most recent (1/0)"),
     Concept(
-        "child_alive_at_window_end",
+        "newborn_alive_at_discharge",
         "eligibility",
-        Availability.AFTER_DISCHARGE,
-        "Newborn alive at end of endpoint window; post-discharge information, eligibility only, induces selection",
+        Availability.BEFORE_DISCHARGE,
+        "Newborn discharged alive; would be derived from age at death and facility stay (measurability UNVERIFIED)",
     ),
     # endpoint inputs (respondent-reported; coded 1 yes, 0 no, NA dk/missing/skip)
     Concept("mother_check_before_discharge", "predictor", Availability.BEFORE_DISCHARGE, "Mother's health checked before leaving facility"),
@@ -75,6 +75,12 @@ _CONCEPTS = [
         "endpoint_input",
         Availability.AFTER_DISCHARGE,
         "Timing of first post-discharge newborn check, days; reference point set per survey in crosswalk",
+    ),
+    Concept(
+        "newborn_age_at_death_days",
+        "endpoint_input",
+        Availability.AFTER_DISCHARGE,
+        "Newborn age at death in days since birth, NA if alive; post-discharge death is a competing state, not a miss",
     ),
     # candidate discharge-time predictors (non-exhaustive; each needs crosswalk evidence)
     Concept("facility_stay_days", "predictor", Availability.BEFORE_DISCHARGE, "Length of facility stay after delivery, days"),

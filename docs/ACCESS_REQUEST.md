@@ -1,15 +1,17 @@
 # Minimum data authorisation request
 
-The smallest step that would move R03 past `HOLD_ACCESS`:
+Public documentation has now established that a distinct post-discharge endpoint exists in both Rwanda waves ([ENDPOINT_AUDIT.md](ENDPOINT_AUDIT.md)). What it cannot establish is the coded values, skips and don't-know rates, which needs respondent data. Still-essential permissions only:
 
-> **Investigator (Isaac Omoding):** please confirm whether you hold an **approved DHS Program project** that covers **Rwanda DHS 2019–20 (`RW2019DHS`), Individual Recode, Stata file `RWIR81DT.ZIP`** (catalogue size 8,467,614 bytes). If yes, authorise in writing:
+> **Investigator (Isaac Omoding):** confirm whether you hold an **approved DHS Program project** covering **Rwanda DHS 2019–20 Individual Recode `RWIR81DT.ZIP`** (catalogue size 8,467,614 bytes). If yes, authorise in writing:
 >
-> 1. delivery of that **one file** to a **private location outside this Git repository** in a named processing environment (state whether this Claude Code cloud container is acceptable under your DHS approval and institutional ethics, or name another environment);
-> 2. processing for **one purpose only**: the Gate 1 endpoint audit of 50 eligible mother–newborn pairs, producing variable-label checks and aggregate counts;
+> 1. delivery of that **one file** to a **private location outside this Git repository**, in a named environment that your DHS approval and institutional ethics allow (state whether this cloud container qualifies);
+> 2. **one purpose**: Gate 1 audit of 50 eligible facility-birth dyads — codes and units of the after-discharge items, stay length, don't-know codes, skip logic, last-birth applicability, twins, weights and design variables;
 > 3. outputs limited to **aggregate, non-identifying** counts and code; no records, audit sheets or individual predictions committed or shared.
 >
-> Supply an approval record (JSON, kept outside the repository) with: `investigator`, `approving_body`, `approval_reference`, `approved_purpose`, `survey_ids`, `approved_environment`, `expires_on`, and set `MNF_APPROVAL_RECORD` to its path. `mnfollowup.access.require_processing_permission` checks these fields before any processing.
+> Provide an approval record (JSON outside the repository) with `investigator`, `approving_body`, `approval_reference`, `approved_purpose`, `survey_ids`, `approved_environment`, `expires_on`, and set `MNF_APPROVAL_RECORD` to its path.
 
-If no DHS project exists yet: register a project at the DHS Program website requesting Rwanda 2019–20 and Rwanda 2025 (for the temporal test), and state the research aim as in [SCIENTIFIC_PROTOCOL.md](SCIENTIFIC_PROTOCOL.md). Kenya 2022 and Ethiopia 2024–25 are requested only after Rwanda passes Gate 1. Uganda 2022 is not in the DHS Program catalogue; ask UBOS for its access route.
+If no DHS project exists: register one requesting Rwanda 2019–20 and Rwanda 2025 for this aim.
 
-Not requested: household recode, GPS/cluster coordinates, men's file, any other country, any linkage, any public deployment.
+**Deferred (not requested now):** Rwanda 2025 file (`RWNR91FL` / `RWIR91`) until 2019–20 passes Gate 1; Kenya 2022 and Ethiopia 2024–25 until their questionnaires are checked; Uganda 2022 until UBOS confirms the access route. **Never requested:** GPS/cluster coordinates, men's file, linkage, public deployment.
+
+No permission is needed for the remaining public step (2019–20 recode variable names and unit codes from the DHS recode manual or a dictionary).

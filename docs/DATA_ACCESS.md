@@ -48,3 +48,19 @@ Respondent microdata of any survey; DHS questionnaires and recode manuals; natio
 ## Next bounded fetch (no permission needed beyond ordinary public access)
 
 In a fresh session with fresh host budget, save (not discard) and hash: the Rwanda 2019–20 and 2025 questionnaires and final reports from dhsprogram.com, and the DHS-7/DHS-8 recode manuals; then read the postnatal section and record verbatim item wording and recode variable labels into `configs/crosswalk.csv` as `VERIFIED_LABEL` with URL and quote. Alternatively page the World Bank variable endpoint (`?offset=`) to reach the women's file labels.
+
+## Public phase 2 (same day, 13 further requests)
+
+Log: [`data/manifests/source_probe_2026-10-17_phase2.json`](../data/manifests/source_probe_2026-10-17_phase2.json). No cached FR370 existed (phase-1 body was discarded), so it was fetched once and hashed.
+
+| # | Host | What | HTTP | Result |
+|---|---|---|---|---|
+| 1–2 | microdata.statistics.gov.rw | Rwanda DHS 2025 file F9 `RWNR91FL` dictionary, offsets 600, 700 | 200 | Labels m15–m19a, m61–m78p read |
+| 3 | microdata.statistics.gov.rw | catalogue search | 200 | 2019-20 DHS not among listed results |
+| 4 | dhsprogram.com | FR370.pdf, 14,694,544 bytes, sha256 `f85ad981…c5f6fa` | 200 | Confirmed Rwanda DHS 2019-20 Final Report; questionnaire Q430–Q449 read |
+| 5–7 | microdata.worldbank.org | RWA_2019 variables with `limit`/`offset` | 200 | Parameters ignored (identical body); 2019-20 recode names not reached |
+| 8–11 | doi.org → link.springer.com | four BMC articles | 200 | Bot-check page only (3,038 bytes) |
+| 12 | doi.org → bmjopen.bmj.com | Pillay 2026 | 403 | Refused |
+| 13 | www.ebi.ac.uk (Europe PMC REST) | five DOIs | 200 | Five records with abstracts |
+
+**Correction:** finding 1 above (standard indicators time the first check from birth) is correct but does not show the endpoint is unavailable. The questionnaire and 2025 dictionary contain separate after-discharge items; see [ENDPOINT_AUDIT.md](ENDPOINT_AUDIT.md).
