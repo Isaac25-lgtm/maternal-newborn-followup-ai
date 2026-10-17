@@ -1,0 +1,21 @@
+{
+  "probe_id": "R03-public-phase-2-2026-10-17",
+  "as_of_utc_date": "2026-10-17",
+  "policy": "public documents only, ~12 targeted requests authorised; no authentication, no respondent microdata",
+  "cache_note": "No FR370 copy existed from phase 1 (body had been discarded), so it was re-fetched once and hashed.",
+  "requests": [
+    {"n": 1, "host": "microdata.statistics.gov.rw", "url": "https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600", "http": 200, "bytes": 69432, "sha256": "104e82134ecc78beebf59abc69e0024068687d1c29b0f621f7b433cb9e0aedd3", "used": "Rwanda DHS 2025 RWNR91FL dictionary: m15-m19a, m61-m74 labels"},
+    {"n": 2, "host": "microdata.statistics.gov.rw", "url": "https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=700", "http": 200, "bytes": 71346, "sha256": "495954568d84ab13222fa1b10f6a61b04643ffa2cab82ea5e2b4d56feae4b46f", "used": "m75-m78p labels"},
+    {"n": 3, "host": "microdata.statistics.gov.rw", "url": "https://microdata.statistics.gov.rw/index.php/catalog?sk=demographic+health+survey", "http": 200, "bytes": 45849, "sha256": "bb84b7c5c8f6f01706582da2a7521cc4fdcc77286e907e3c305d570b75b716e6", "used": "Rwanda 2019-20 DHS not among listed results; catalogue ids seen: 4, 6, 11, 14, 68 (DHS 1992-2015), 126 (2025)"},
+    {"n": 4, "host": "dhsprogram.com", "url": "https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf", "http": 200, "bytes": 14694544, "sha256": "f85ad9814654973189b675a64fb931eaf28a6b419268f2b5c607ed6675c5f6fa", "used": "PDF title 'Rwanda Demographic and Health Survey 2019-20 Final Report [FR370]', 619 pages; Appendix F questionnaire Q430-Q449; Tables 9.9-9.12 titles/footnotes"},
+    {"n": 5, "host": "microdata.worldbank.org", "url": "https://microdata.worldbank.org/index.php/api/catalog/RWA_2019_DHS_v01_M/variables?limit=5000&offset=0", "http": 200, "bytes": 10351, "sha256": "d41519ec192c5fa8e75804762910ea79df8643e845c32c617b43f57342edddb5", "used": "limit ignored; same first 100 household variables"},
+    {"n": 6, "host": "microdata.worldbank.org", "url": "https://microdata.worldbank.org/index.php/api/catalog/RWA_2019_DHS_v01_M/variables?offset=1300", "http": 200, "bytes": 10351, "sha256": "d41519ec192c5fa8e75804762910ea79df8643e845c32c617b43f57342edddb5", "used": "offset ignored (identical body)"},
+    {"n": 7, "host": "microdata.worldbank.org", "url": "https://microdata.worldbank.org/index.php/api/catalog/RWA_2019_DHS_v01_M/variables?offset=1900", "http": 200, "bytes": 10351, "sha256": "d41519ec192c5fa8e75804762910ea79df8643e845c32c617b43f57342edddb5", "used": "offset ignored (identical body)"},
+    {"n": 8, "host": "doi.org -> link.springer.com", "url": "https://doi.org/10.1186/s12884-026-09313-9", "http": 200, "bytes": 3038, "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea", "used": "bot-check page only; article not received"},
+    {"n": 9, "host": "doi.org -> link.springer.com", "url": "https://doi.org/10.1186/s12911-023-02305-1", "http": 200, "bytes": 3038, "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea", "used": "bot-check page only"},
+    {"n": 10, "host": "doi.org -> link.springer.com", "url": "https://doi.org/10.1186/s13690-022-00964-6", "http": 200, "bytes": 3038, "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea", "used": "bot-check page only"},
+    {"n": 11, "host": "doi.org -> link.springer.com", "url": "https://doi.org/10.1186/s12884-022-05109-9", "http": 200, "bytes": 3038, "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea", "used": "bot-check page only"},
+    {"n": 12, "host": "doi.org -> bmjopen.bmj.com", "url": "https://doi.org/10.1136/bmjopen-2025-108734", "http": 403, "bytes": 5016, "sha256": "d7c0bc27e6fd1c379d91df1751b9e800b51beecb0c109d83fda5ae3a9c9dda88", "used": "refused"},
+    {"n": 13, "host": "www.ebi.ac.uk", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:(five DOIs OR-ed)&resultType=core&format=json&pageSize=10", "http": 200, "bytes": 41882, "sha256": "21e14b6d7ace8cd1226ac166d20816706ba3308c5e9dd3be620de9527a11fc3b", "used": "5/5 hits: titles, authors, journals, years, PMIDs, PMCIDs, abstracts"}
+  ]
+}

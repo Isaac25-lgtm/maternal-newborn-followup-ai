@@ -1,0 +1,161 @@
+survey_id,concept,source_file,source_variable,source_location,timing_reference,status,evidence_url,evidence_label_verbatim,verified_on,notes
+RW2019DHS,survey_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,cluster_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,stratum,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,sample_weight,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,household_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,woman_line,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,birth_index,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,days_since_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,facility_delivery,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q430, printed p.446",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,Where did you give birth to (NAME)?,2026-10-17,Home 11/12 and other 96 skip facility block (Q434B); recode variable name not yet verified for RWIR81
+RW2019DHS,multiple_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,is_most_recent_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,newborn_alive_at_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,mother_check_before_discharge,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q435, printed p.447",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,Did anyone check on your health while you were still in the facility?,2026-10-17,YES/NO; no DON'T KNOW code printed; recode variable name not yet verified for RWIR81
+RW2019DHS,newborn_check_before_discharge,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q438, printed p.447",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,Did anyone check on (NAME)'s health while you were still in the facility?,2026-10-17,YES/NO/DON'T KNOW; recode variable name not yet verified for RWIR81
+RW2019DHS,mother_check_after_discharge,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q441, printed p.448",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,Did anyone check on your health after you left the facility?,2026-10-17,"Asked only on facility path; 'anyone'; no time limit in wording; YES/NO, no DON'T KNOW code printed; recode variable name not yet verified for RWIR81"
+RW2019DHS,newborn_check_after_discharge,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q445, printed p.448",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,Did any health care provider or a traditional birth attendant check on (NAME)'s health in the two months after you left (FACILITY IN 430)?,2026-10-17,Provider-restricted and limited to two months after leaving; YES/NO/DON'T KNOW; recode variable name not yet verified for RWIR81
+RW2019DHS,mother_after_discharge_check_day,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q442, printed p.448",birth,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,How long after delivery did that check take place?,2026-10-17,Clock is delivery; recode variable name not yet verified for RWIR81
+RW2019DHS,newborn_after_discharge_check_day,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q446, printed p.449",birth,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,"How many hours, days or weeks after the birth of (NAME) did that check take place?",2026-10-17,Clock is birth; recode variable name not yet verified for RWIR81
+RW2019DHS,newborn_age_at_death_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,facility_stay_days,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q431, printed p.446",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,How long after (NAME) was delivered did you stay there?,2026-10-17,"Recorded as HOURS/DAYS/WEEKS, DON'T KNOW 998; recode variable name not yet verified for RWIR81"
+RW2019DHS,maternal_age_at_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,parity,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,maternal_education,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,anc_visits,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,caesarean_delivery,"FR370 Appendix F, Woman's Questionnaire Section 4 (sha256 f85ad981...c5f6fa)",,"Q432, printed p.446",not_applicable,QUESTIONNAIRE_ONLY,https://dhsprogram.com/pubs/pdf/FR370/FR370.pdf,"Was (NAME) delivered by caesarean, that is, did they cut your belly open to take the baby out?",2026-10-17,recode variable name not yet verified for RWIR81
+RW2019DHS,facility_sector,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,skilled_birth_attendant,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,reported_birth_size,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,household_wealth_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,residence_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,marital_status_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2019DHS,insurance_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,survey_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,cluster_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,stratum,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,sample_weight,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,household_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,woman_line,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,birth_index,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,days_since_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,facility_delivery,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m15,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,place of delivery,2026-10-17,Facility code set not yet seen; derivation rule pending audit
+RW2025DHS,multiple_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,is_most_recent_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,newborn_alive_at_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,mother_check_before_discharge,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m62,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,respondent's health checked after delivery before discharge,2026-10-17,"Label only; codes, skips and missing values not yet seen"
+RW2025DHS,newborn_check_before_discharge,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m74,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,child's health checked before discharge,2026-10-17,"Label only; codes, skips and missing values not yet seen"
+RW2025DHS,mother_check_after_discharge,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m66,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,respondent's health checked after discharge/delivery at home,2026-10-17,Shared with home deliveries; must be restricted to facility births
+RW2025DHS,newborn_check_after_discharge,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m70,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,child's health checked after discharge/delivery at home,2026-10-17,Shared with home deliveries; must be restricted to facility births
+RW2025DHS,mother_after_discharge_check_day,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m67,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",birth,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,how long after delivery respondent's health check (after discharge/home delivery,2026-10-17,"Label truncated in dictionary; clock is delivery, not discharge"
+RW2025DHS,newborn_after_discharge_check_day,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m71,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",birth,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,how long after delivery child's health check (after discharge/home delivery) too,2026-10-17,"Label truncated in dictionary; clock is delivery, not discharge"
+RW2025DHS,newborn_age_at_death_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,facility_stay_days,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m61,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,time spent at place of delivery,2026-10-17,Unit encoding (hours/days/weeks) not yet seen
+RW2025DHS,maternal_age_at_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,parity,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,maternal_education,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,anc_visits,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,caesarean_delivery,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m17,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,delivery by caesarean section,2026-10-17,"Label only; codes, skips and missing values not yet seen"
+RW2025DHS,facility_sector,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,skilled_birth_attendant,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,reported_birth_size,RWNR91FL (Pregnancy and Postnatal Care (last 3 yrs) Recode),m18,"NISR NADA catalog 126, file F9, dictionary offsets 600-700",not_applicable,VERIFIED_LABEL,https://microdata.statistics.gov.rw/index.php/catalog/126/datafile/F9/?limit=100&offset=600,size of child at birth,2026-10-17,"Label only; codes, skips and missing values not yet seen"
+RW2025DHS,household_wealth_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,residence_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,marital_status_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+RW2025DHS,insurance_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,survey_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,cluster_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,stratum,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,sample_weight,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,household_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,woman_line,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,birth_index,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,days_since_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,facility_delivery,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,multiple_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,is_most_recent_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,newborn_alive_at_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,mother_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,newborn_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,mother_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,newborn_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,mother_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,newborn_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,newborn_age_at_death_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,facility_stay_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,maternal_age_at_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,parity,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,maternal_education,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,anc_visits,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,caesarean_delivery,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,facility_sector,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,skilled_birth_attendant,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,reported_birth_size,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,household_wealth_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,residence_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,marital_status_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+KE2022DHS,insurance_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+UG2022DHS,survey_id,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,cluster_id,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,stratum,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,sample_weight,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,household_id,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,woman_line,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,birth_index,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,days_since_birth,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_delivery,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,multiple_birth,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,is_most_recent_birth,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_alive_at_discharge,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,mother_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,newborn_age_at_death_days,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_stay_days,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,maternal_age_at_birth,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,parity,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,maternal_education,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,anc_visits,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,caesarean_delivery,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,facility_sector,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,skilled_birth_attendant,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,reported_birth_size,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,household_wealth_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,residence_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,marital_status_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+UG2022DHS,insurance_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,"Not listed in DHS Program dataset catalogue (api.dhsprogram.com, 2026-10-17); distributor to be confirmed with UBOS."
+ET2024DHS,survey_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,cluster_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,stratum,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,sample_weight,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,household_id,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,woman_line,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,birth_index,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,days_since_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,facility_delivery,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,multiple_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,is_most_recent_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,newborn_alive_at_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,mother_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,newborn_check_before_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,mother_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,newborn_check_after_discharge,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,mother_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,newborn_after_discharge_check_day,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,newborn_age_at_death_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,facility_stay_days,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,maternal_age_at_birth,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,parity,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,maternal_education,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,anc_visits,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,caesarean_delivery,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,facility_sector,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,skilled_birth_attendant,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,reported_birth_size,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,household_wealth_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,residence_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,marital_status_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.
+ET2024DHS,insurance_at_interview,,,,UNVERIFIED,UNVERIFIED,,,,Concept defined; no source evidence read yet.

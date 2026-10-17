@@ -1,0 +1,17 @@
+synthetic_record,survey_id,cluster_id,household_id,woman_line,birth_index,is_most_recent_birth,days_since_birth,facility_delivery,multiple_birth,newborn_alive_at_discharge,facility_stay_days,newborn_age_at_death_days,mother_check_before_discharge,newborn_check_before_discharge,mother_check_after_discharge,mother_after_discharge_check_day,newborn_check_after_discharge,newborn_after_discharge_check_day,case_note
+SYNTHETIC_NOT_REAL,SYN_A,1,1,2,1,1,120,1,0,1,1,,1,1,1,3,1,2,both checked within window
+SYNTHETIC_NOT_REAL,SYN_A,1,2,2,1,1,200,1,0,1,1,,1,1,0,,0,,pre-discharge checks only: still missed
+SYNTHETIC_NOT_REAL,SYN_A,2,1,3,1,1,300,1,0,1,2,,0,1,1,20,1,5,mother checked late newborn on time
+SYNTHETIC_NOT_REAL,SYN_A,2,2,2,1,1,90,1,0,1,1,,1,0,,,0,,mother dont-know newborn missed
+SYNTHETIC_NOT_REAL,SYN_A,3,1,2,1,1,400,1,0,1,1,,1,1,1,,1,2,mother checked timing unknown
+SYNTHETIC_NOT_REAL,SYN_A,3,2,2,1,1,150,0,0,1,,,0,0,0,,0,,home birth
+SYNTHETIC_NOT_REAL,SYN_A,4,1,2,1,1,150,1,1,1,1,,1,1,1,4,1,4,twin
+SYNTHETIC_NOT_REAL,SYN_A,4,2,2,1,1,3,1,0,1,1,,1,1,0,,0,,insufficient exposure
+SYNTHETIC_NOT_REAL,SYN_A,5,1,2,2,0,500,1,0,1,1,,1,1,1,2,1,2,not most recent birth
+SYNTHETIC_NOT_REAL,SYN_A,5,2,2,1,1,800,1,0,1,1,,1,1,1,2,1,2,outside recall period
+SYNTHETIC_NOT_REAL,SYN_A,6,1,2,1,1,100,1,0,1,1,4,1,1,1,3,0,,newborn died after discharge before any check
+SYNTHETIC_NOT_REAL,SYN_A,6,2,2,1,1,100,,0,1,1,,1,1,1,2,1,2,place of delivery missing
+SYNTHETIC_NOT_REAL,SYN_A,7,1,2,1,1,100,1,0,0,2,1,1,1,1,3,0,,newborn died before discharge
+SYNTHETIC_NOT_REAL,SYN_A,7,2,2,1,1,100,1,0,1,1,,1,1,1,-2,1,2,negative mother timing
+SYNTHETIC_NOT_REAL,SYN_A,8,1,2,1,1,100,1,0,1,1,5,1,1,1,3,1,3,newborn checked then died
+SYNTHETIC_NOT_REAL,SYN_A,8,2,2,1,1,100,1,0,1,3,,1,1,1,2,1,5,check timed before discharge on birth clock
